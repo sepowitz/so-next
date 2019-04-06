@@ -1,5 +1,10 @@
 import React from "react";
+import styled from "styled-components";
+
+const Hello = styled.h1`
+  color: red;
+`;
 
 export default () => {
-  return <div>Home</div>;
+  return <Hello>Home</Hello>;
 };

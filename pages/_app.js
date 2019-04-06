@@ -1,7 +1,8 @@
 import React from "react";
 import App, { Container } from "next/app";
+import Head from "next/head";
 
-class AppLayout extends App {
+class AppOverride extends App {
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
 
@@ -17,6 +18,9 @@ class AppLayout extends App {
 
     return (
       <Container>
+        <Head>
+          <title>Sebastian Odell | Fullstack Developer</title>
+        </Head>
         <h1>I'm everywhere</h1>
         <Component {...pageProps} />
       </Container>
@@ -24,4 +28,4 @@ class AppLayout extends App {
   }
 }
 
-export default AppLayout;
+export default AppOverride;
